@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<scrip src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js">
+</script>
+
+</head>
+<body ng-app="">
+  <div ng-controller="myCtrl">
+name:<input type="text" ng-model="movie.name">
+duration:<input type="text" ng-model="movie.duration">
+year:<input type="text" ng-click="movie.year">
+catogery:<input type="text" ng-click="movie.catogery">
+<button ng-click="addMovie()">add</button>
+<button ng-click="update()">update</button>
+</div>
+<div ng-repeate="movie in movielists">
+  <p>{{movie.name}}</p>
+  <p>{{movie.duration}}</p>
+  <p>{{movie.year}}</p>
+  <p>{{movie.catogery}}</p>
+</div>
+<script>
+function myCtrl($scope){
+  console.log("hello world from here");
+  movie1={
+    name="raees"
+    duration="2.30"
+    year="2017"
+    catogery="action"
+  }
+  movie2={
+    name="kaabil"
+    duration="2.30"
+    year="2009"
+    catogery="action"
+  }
+  movie3={
+    name="pink"
+    duration="2.30"
+    year="2099"
+    catogery="action"
+  }
+
+
+</script>
+
+</body>
+</html>
