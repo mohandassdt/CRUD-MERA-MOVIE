@@ -1,0 +1,97 @@
+<div class="container">
+	<div class="row">
+		  <div class="col-md-6">
+          <!-- Nav tabs --><div class="card">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#movies" aria-controls="movies" role="tab" data-toggle="tab">Movies</a></li>
+              <li role="presentation"><a href="#theaters" aria-controls="theaters" role="tab" data-toggle="tab">Theaters</a></li>
+              <li role="presentation"><a href="#cities" aria-controls="citis" role="tab" data-toggle="tab">Cities</a></li>
+              <li role="presentation"><a href="#showtiming" aria-controls="showtiming" role="tab" data-toggle="tab">ShowTimings</a></li> </ul>
+
+                                    <!-- Tab panes -->
+        <div class="tab-content">
+					 <div role="tabpanel" class="tab-pane active" id="movies"><table class="table">
+					             <thead>
+					                 <tr>
+					                     <th>ID</th>
+					                     <th>Name</th>
+					                     <th>Duration</th>
+					                     <th>Year</th>
+					                     <th>Categoary</th>
+					                 </tr>
+					             </thead>
+					             <tbody>
+					                 <tr>
+					                  <td><input ng-model="contact.movieID"/></td>
+
+					                     <td><input ng-model="contact.movieName"/></td>
+					                     <td><input ng-model="contact.duration"/></td>
+					                     <td><input ng-model="contact.year"/></td>
+					                     <td><input ng-model="contact.category"/></td>
+
+					                   <td><button ng-click="addMovie()" class="btn btn-primary">Add Movie</button></td>
+					                   <td><button ng-click="updateMovie()" class="btn btn-primary">Update</button></td>
+
+					                 </tr>
+					                 <tr ng-repeat=" contact in contactlist">
+					                     <td>{{contact.movieID}}</td>
+					                     <td>{{contact.movieName}}</td>
+					                     <td>{{contact.duration}}</td>
+					                     <td>{{contact.year}}</td>
+					                     <td>{{contact.category}}</td>
+					                     <td><button ng-click="removeMovie(contact)" class="btn btn-danger">Remove</button></td>
+					                     <td><button ng-click="editMovie(contact)" class="btn btn-primary">Edit</button></td>
+					                 </tr>
+					             </tbody>
+					  </table>
+</div>
+				<div role="tabpanel" class="tab-pane" id="theaters">
+					<
+
+					<table class="table">
+					            <thead>
+					                <tr>
+					                    <th>ID</th>
+					                    <th>Name</th>
+															<th>Location</th>
+															<th>ShowTiming</th>
+
+					              </tr>
+					            </thead>
+					            <tbody>
+					                <tr>
+					                 <td><input ng-model="contact.movieID"/></td>
+
+					                    <td><input ng-model="contact.theaterID"/></td>
+					                    <td><input ng-model="contact.theaterName"/></td>
+															<td><input ng-model="contact.location"/></td>
+															<td><input ng-model="contact.showTime"/></td>
+
+					                  <td><button ng-click="addTheater()" class="btn btn-primary">Add Movie</button></td>
+					                  <td><button ng-click="updateTheater()" class="btn btn-primary">Update</button></td>
+
+					                </tr>
+					                <tr ng-repeat=" contact in contactlist">
+					                    <td>{{contact.theaterID}}</td>
+					                    <td>{{contact.theaterName}}</td>
+					                    <td>{{contact.location}}</td>
+					                    <td>{{contact.showTime}}</td>
+
+					                   <td><button ng-click="removeTheater(contact)" class="btn btn-danger">Remove</button></td>
+					                    <td><button ng-click="editTheater(contact)" class="btn btn-primary">Edit</button></td>
+					                </tr>
+					            </tbody>
+					 </table>
+
+				</div>
+        <div role="tabpanel" class="tab-pane" id="messages">Lorem Ipsum is simply dummy text of the printi
+
+					, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+          <div role="tabpanel" class="tab-pane" id="settings">Lorem Ipsum is simply dum
+						entially unchanged. It
+						was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passage..</div>
+          </div>
+</div>
+      </div>
+	</div>
+</div>

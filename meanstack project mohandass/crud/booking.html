@@ -1,0 +1,33 @@
+<table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Duration</th>
+                    <th>Year</th>
+                    <th>Categoary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                 <td><input ng-model="contact.movieID"/></td>
+                    <td><input ng-model="contact.movieName"/></td>
+                    <td><input ng-model="contact.duration"/></td>
+                    <td><input ng-model="contact.year"/></td>
+                    <td><input ng-model="contact.category"/></td>
+
+                  <td><button ng-click="addMovie()" class="btn btn-primary">Add Movie</button></td>
+                  <td><button ng-click="updateMovie()" class="btn btn-primary">Update</button></td>
+
+                </tr>
+                <tr ng-repeat=" contact in contactlist">
+                    <td>{{contact.movieID}}</td>
+                    <td>{{contact.movieName}}</td>
+                    <td>{{contact.duration}}</td>
+                    <td>{{contact.year}}</td>
+                    <td>{{contact.category}}</td>
+                    <td><button ng-click="removeMovie(contact)" class="btn btn-danger">Remove</button></td>
+                    <td><button ng-click="editMovie(contact)" class="btn btn-primary">Edit</button></td>
+                </tr>
+            </tbody>
+ </table>
